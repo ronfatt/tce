@@ -10,211 +10,239 @@ export type Product = {
 };
 
 export const dashboardMetrics = [
-  { label: "资产状态", value: "Token余额：56", tone: "text-white" },
-  { label: "今日收益", value: "+2.1 Token", tone: "text-cyan-300" },
-  { label: "健康评分", value: "72 / 100", tone: "text-emerald-300" },
-  { label: "活跃指数", value: "High", tone: "text-fuchsia-300" },
+  { label: "健康指数", value: "72 / 100", tone: "text-emerald-300" },
+  { label: "睡眠状态", value: "70", tone: "text-cyan-300" },
+  { label: "压力指数", value: "72", tone: "text-fuchsia-300" },
+  { label: "今日提醒", value: "补水优先", tone: "text-white" },
 ];
 
 export const novaGreeting = {
-  title: "你好，我是 AI管家 Nova",
-  description: "我会帮助你管理收益、健康和消费。",
-  status: "Nova 已为你准备好今日建议",
+  title: "你好，我是 Nova",
+  description: "你的 AI健康生活管家。",
+  status: "Nova 已为你准备好今日健康建议",
 };
 
 export const heroHighlights = [
-  "AI管家负责资产管理、健康管理、消费策略与平台导航",
-  "所有模块由本地 mock 数据驱动，无需真实支付、钱包或登录",
-  "适合 Token / 矿机 / 商城 / 游戏平台快速加上 AI 用户体验层",
+  "围绕健康、提醒、预防与生活管理构建 AI 管家体验",
+  "适合 40+ 会员型平台、健康产品平台与高信任场景演示",
+  "全部使用本地 mock 数据，无需真实登录、支付或医疗系统",
 ];
+
+export const heroSuggestions = [
+  "优先补足今日饮水",
+  "晚餐减少高糖饮品",
+  "安排 20 分钟轻度散步",
+];
+
+export const lifeIndex = [
+  { label: "睡眠", value: 70, accent: "from-cyan-400 to-sky-300" },
+  { label: "压力", value: 75, accent: "from-fuchsia-400 to-violet-300" },
+  { label: "血糖风险", value: 65, accent: "from-amber-400 to-orange-300" },
+  { label: "心血管", value: 72, accent: "from-emerald-400 to-green-300" },
+];
+
+export const osStatus = [
+  { label: "系统角色", value: "Nova AI健康管家" },
+  { label: "模式", value: "AI Personal Health Butler" },
+  { label: "同步状态", value: "Mock 健康追踪中" },
+];
+
+export const osTabs = ["睡眠", "压力", "血糖", "心血管"];
+
+export const osModules = [
+  {
+    id: "sleep",
+    title: "睡眠监测",
+    metric: "70",
+    accent: "bg-cyan-500",
+    summary: "最近 7 天睡眠波动较明显，恢复质量仍有提升空间。",
+    action: "建议固定睡前节奏，减少晚间刺激性饮品",
+  },
+  {
+    id: "stress",
+    title: "压力管理",
+    metric: "72",
+    accent: "bg-fuchsia-500",
+    summary: "压力指数偏高，容易影响睡眠与白天精神稳定度。",
+    action: "建议今天降低高强度活动，优先恢复",
+  },
+  {
+    id: "glucose",
+    title: "血糖观察",
+    metric: "65",
+    accent: "bg-amber-500",
+    summary: "存在轻度血糖波动风险，需要注意饮食节奏。",
+    action: "建议减少含糖饮料，晚餐控制油脂与甜食",
+  },
+  {
+    id: "cardio",
+    title: "心血管关注",
+    metric: "72",
+    accent: "bg-emerald-500",
+    summary: "整体状态稳定，但久坐与压力可能带来额外负担。",
+    action: "建议增加轻度步行与日间补水",
+  },
+];
+
+export const coreStatement =
+  "我们不是做一个 AI聊天机器人，而是打造一个 AI生活管家，帮助用户管理收益、健康与生活习惯。";
+
+export const upgradedStatement =
+  "AI管家不仅解读数据，还会主动提醒、观察风险、生成健康任务，并为用户提供更稳妥的生活管理建议。";
 
 export const butlerReminder = {
   tokenGain: "+2.1 Token",
   balance: "56 Token",
   healthScore: "72",
-  action: "当前更适合兑换健康产品，而不是直接参与游戏",
+  action: "当前更适合优先做健康恢复，而不是额外消耗精力",
   quote:
-    "根据你近期的消费记录，当前更适合兑换健康产品，而不是直接参与游戏。",
+    "根据你最近的睡眠、补水与压力状态，今天更适合做恢复型安排，先把健康状态稳住，再考虑其他消费动作。",
 };
-
-export const heroSuggestions = [
-  "优先兑换健康产品",
-  "今日适合小额娱乐游戏",
-  "建议增加饮水",
-];
 
 export const predictiveInsights = [
   {
-    label: "AI Predictive Insight",
-    title: "按照当前收益速度",
-    highlight: "你将在 4 天后",
-    description: "达到 70 Token",
+    label: "AI收益预测",
+    title: "当前余额",
+    highlight: "56 Token",
+    description: "按照当前矿机收益速度计算",
   },
   {
-    label: "AI Predictive Insight",
-    title: "你的健康评分",
-    highlight: "预计 7 天可提升至 80",
-    description: "前提是保持饮水和基础运动",
+    label: "AI收益预测",
+    title: "预计 3 天后达到",
+    highlight: "62 Token",
+    description: "若维持当前收益速度",
+  },
+  {
+    label: "AI收益预测",
+    title: "预计 7 天后达到",
+    highlight: "70 Token",
+    description: "收益持续累积后的预计节点",
   },
 ];
 
-export const lifeIndex = [
-  { label: "财富指数", value: 65, accent: "from-cyan-400 to-cyan-300" },
-  { label: "健康指数", value: 72, accent: "from-emerald-400 to-emerald-300" },
-  { label: "平台活跃", value: 88, accent: "from-fuchsia-400 to-violet-300" },
-  { label: "消费效率", value: 74, accent: "from-sky-400 to-indigo-300" },
+export const healthRiskItems = [
+  { label: "血糖风险", value: "中等", tone: "text-amber-600" },
+  { label: "胆固醇风险", value: "轻度偏高", tone: "text-orange-600" },
+  { label: "压力指数", value: "偏高", tone: "text-fuchsia-600" },
 ];
 
-export const coreStatement =
-  "AI管家是平台的核心智能系统，通过数据分析与个性化建议，帮助用户管理收益、健康与消费。";
+export const healthRiskSummary =
+  "根据你的饮食习惯、睡眠状态与健康评分，AI判断你存在轻度压力与血糖波动风险。";
+
+export const emotionInsight = {
+  score: 74,
+  status: "轻度疲劳",
+  explanation:
+    "根据你的睡眠评分、活跃频率与互动行为，AI判断你当前处于轻度疲劳状态。",
+  suggestions: ["减少高强度活动", "优先进行健康恢复", "增加饮水"],
+  product: "能量恢复组合",
+};
+
+export const healthTrend = [65, 68, 70, 72, 71, 73, 74];
+
+export const healthTrendSummary =
+  "过去 7 天你的健康状态整体呈上升趋势，睡眠改善明显。";
+
+export const healthTrendAdvice = ["保持每日饮水", "增加轻度运动"];
 
 export const healthSnapshot = [
   { label: "睡眠评分", value: "70" },
   { label: "饮水完成度", value: "60%" },
-  { label: "压力指数", value: "中等" },
-  { label: "运动次数", value: "2" },
+  { label: "压力指数", value: "中等偏高" },
+  { label: "本周运动", value: "2 次" },
 ];
 
 export const healthAdvice =
-  "你最近7天睡眠波动较大，建议减少晚间咖啡摄入，并增加白天饮水量。";
+  "你最近 7 天睡眠波动较大，建议减少晚间咖啡摄入，并增加白天饮水量。若近期容易疲劳，可优先考虑恢复型健康方案。";
 
-export const spendingChoices = [
-  {
-    id: "redeem",
-    title: "30 Token",
-    suggestion: "兑换健康组合",
-    meta: "优先完成高价值产品兑换",
-    badge: "最佳策略",
-  },
-  {
-    id: "game",
-    title: "10 Token",
-    suggestion: "娱乐体验",
-    meta: "适合小额试玩，避免过度消耗",
-    badge: "策略分配",
-  },
-  {
-    id: "reserve",
-    title: "剩余 Token",
-    suggestion: "持续累积",
-    meta: "保留灵活额度，为下一次兑换做准备",
-    badge: "长期视角",
-  },
+export const healthFocusOptions = [
+  "血糖管理",
+  "胆固醇管理",
+  "心血管健康",
+  "压力管理",
+  "睡眠管理",
+  "体重管理",
 ];
 
-export const spendingSummary =
-  "根据平台模拟数据，兑换健康产品的实际价值更高。";
+export const healthManagementCopy =
+  "Nova 会根据你的健康关注方向，生成更适合 40+ 用户的日常生活建议与保养方案。";
 
 export const productList: Product[] = [
   {
-    id: "energy",
-    name: "能量恢复组合",
-    fitFor: "容易疲劳、作息不稳定",
-    includes: "维生素B、草本能量饮品",
-    tokenCost: 30,
-    rating: "高价值",
-    summary: "快速帮助用户理解 Token 如何转化为可感知的日常价值。",
+    id: "glucose",
+    name: "血糖管理方案",
+    fitFor: "饮食不规律、担心血糖波动",
+    includes: "草本饮品、维生素、营养补充品",
+    tokenCost: 36,
+    rating: "稳健管理",
+    summary: "适合需要做日常保养和轻度风险管理的用户。",
     aiReason:
-      "根据当前模拟健康数据，你存在精力波动、饮水偏少和睡眠质量一般的问题。这类组合更适合作为高频演示推荐，既容易理解，也能直接体现平台从收益到消费的闭环价值。",
+      "此组合适合血糖波动用户进行日常保养。Nova 会把它作为稳健型方案推荐给需要控制饮食节奏与减少高糖摄入的用户。",
   },
   {
     id: "sleep",
-    name: "睡眠修护组合",
-    fitFor: "睡眠浅、夜间易醒",
-    includes: "草本饮品、舒缓配方",
+    name: "睡眠修护方案",
+    fitFor: "晚间易醒、恢复质量不稳定",
+    includes: "草本舒缓饮品、舒缓配方",
     tokenCost: 42,
-    rating: "修护型",
-    summary: "突出平台对用户长期状态的洞察，不只是做即时推荐。",
+    rating: "睡眠优先",
+    summary: "适合当前睡眠波动较大、白天疲劳感明显的用户。",
     aiReason:
-      "如果用户的核心困扰是晚间恢复效率偏低，这个组合比泛化推荐更有说服力。它适合作为中高价值方案，展示 AI 如何结合睡眠趋势做更精细的引导。",
+      "如果用户最近的核心问题是睡眠波动和夜间恢复效率偏低，Nova 会优先推荐睡眠修护方案，帮助先稳定基础状态。",
   },
   {
     id: "balance",
-    name: "日常平衡组合",
-    fitFor: "想维持日常状态",
-    includes: "基础营养补充品",
-    tokenCost: 25,
-    rating: "入门友好",
-    summary: "适合首次体验产品兑换的用户，降低使用门槛。",
+    name: "日常平衡方案",
+    fitFor: "想维持日常健康状态",
+    includes: "基础营养补充品、日常保养组合",
+    tokenCost: 28,
+    rating: "日常保养",
+    summary: "适合作为长期生活管理的基础型方案。",
     aiReason:
-      "当用户暂时没有明确疲劳或睡眠问题时，平台可先推荐更轻量的平衡型组合，帮助用户完成第一次价值感知与兑换动作，提升复购与留存的可解释性。",
+      "当用户没有强烈的单点风险时，Nova 会建议用更轻量的日常平衡方案帮助维持状态，降低使用门槛并增强信任感。",
   },
 ];
 
-export const quickQuestions = [
-  "我今天赚多少 Token",
-  "有什么产品适合我",
-  "我最近有点疲劳",
-  "今天适合玩游戏吗",
+export const explainableRecommendation = {
+  title: "推荐原因",
+  reasons: ["你最近睡眠波动较大", "饮水量不足", "连续 2 天活跃后恢复偏慢"],
+  result: "所以推荐：能量恢复组合",
+  note: "Explainable AI 能让用户知道推荐逻辑来自生活状态，而不是随意推送。 ",
+};
+
+export const healthTasks = [
+  "喝水 6 杯",
+  "散步 20 分钟",
+  "晚间避免含糖饮料",
 ];
 
 export const dailyTasks = [
-  "领取今日收益",
+  "减少含糖饮料",
   "增加饮水",
-  "查看AI推荐产品",
-  "保留10 Token娱乐",
+  "晚餐减少油脂",
+  "保持 30 分钟散步",
 ];
 
-export const butlerModeTasks = [
-  "领取收益",
-  "完成健康打卡",
-  "兑换健康产品",
-];
+export const butlerModeTasks = ["领取收益", "完成健康打卡", "查看健康方案"];
 
 export const aiMemoryNotes = [
-  "我注意到你最近更常查看健康类建议。",
-  "你上一次更关注能量恢复组合，而不是娱乐消耗。",
+  "我注意到你最近更常查看睡眠与恢复类建议。",
+  "你上一次更关注日常保养，而不是即时消耗。",
+];
+
+export const quickQuestions = [
+  "我最近血糖高怎么办",
+  "我压力很大",
+  "我晚上睡不好",
+  "我容易疲劳",
 ];
 
 export const businessValues = [
-  "提高用户活跃",
-  "提升消费转化",
-  "增强复购率",
-  "拉高平台粘性",
-];
-
-export const osTabs = ["财富", "健康", "娱乐", "消费"];
-
-export const osModules = [
-  {
-    id: "wealth",
-    title: "财富引擎",
-    metric: "65",
-    accent: "bg-cyan-500",
-    summary: "自动追踪收益速度、余额变化与可兑换节点。",
-    action: "4 天后预计达到 70 Token",
-  },
-  {
-    id: "health",
-    title: "健康引擎",
-    metric: "72",
-    accent: "bg-emerald-500",
-    summary: "持续跟踪睡眠、饮水、压力和恢复趋势。",
-    action: "7 天后健康评分预计提升至 80",
-  },
-  {
-    id: "play",
-    title: "娱乐引擎",
-    metric: "High",
-    accent: "bg-fuchsia-500",
-    summary: "根据当前状态建议小额娱乐，控制消耗节奏。",
-    action: "建议保留 10 Token 作为轻量体验预算",
-  },
-  {
-    id: "spend",
-    title: "消费引擎",
-    metric: "74",
-    accent: "bg-indigo-500",
-    summary: "优先推动高价值产品兑换，提升真实感知价值。",
-    action: "能量恢复组合是当前最优先方案",
-  },
-];
-
-export const osStatus = [
-  { label: "系统角色", value: "AI管家 Nova" },
-  { label: "模式", value: "AI Companion OS" },
-  { label: "同步状态", value: "Mock 实时同步" },
+  "提高用户信任度",
+  "增强长期粘性",
+  "提升健康方案转化",
+  "建立家庭级服务价值",
 ];
 
 export const demoFooterCopy =
-  "本系统为第三方 AI Companion OS 演示层，适用于已具备 Token、矿机、商城或游戏模块的平台。通过 AI管家 Nova，平台可为用户提供更智能的收益解读、健康互动、产品推荐与消费引导。";
+  "本系统为第三方 AI健康生活管家演示层，适用于会员平台、健康产品平台与高信任服务场景。通过 Nova，平台可为用户提供收益说明、健康提醒、生活建议、健康方案推荐与持续陪伴。";

@@ -15,7 +15,7 @@ type Message = {
 const welcomeMessage: Message = {
   id: "welcome",
   role: "assistant",
-  content: "你好，我是你的 AI管家 Nova。我可以帮你管理收益、健康与消费。",
+  content: "你好，我是 Nova，你的 AI健康生活管家。我可以帮你管理健康提醒、生活习惯和日常保养建议。",
 };
 
 export function AIChatSection() {
@@ -26,19 +26,11 @@ export function AIChatSection() {
     const cleanQuestion = question.trim();
     if (!cleanQuestion) return;
 
-    const userMessage: Message = {
-      id: `${Date.now()}-user`,
-      role: "user",
-      content: cleanQuestion,
-    };
-
-    const aiMessage: Message = {
-      id: `${Date.now()}-assistant`,
-      role: "assistant",
-      content: getMockAIReply(cleanQuestion),
-    };
-
-    setMessages((current) => [...current, userMessage, aiMessage]);
+    setMessages((current) => [
+      ...current,
+      { id: `${Date.now()}-user`, role: "user", content: cleanQuestion },
+      { id: `${Date.now()}-assistant`, role: "assistant", content: getMockAIReply(cleanQuestion) },
+    ]);
     setInput("");
   }
 
@@ -46,10 +38,10 @@ export function AIChatSection() {
     <SectionShell id="ai-chat" className="overflow-hidden">
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-[30px] bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 p-6 text-white">
-          <div className="pill border-white/10 bg-white/10 text-cyan-100">重点模块</div>
-          <h2 className="mt-4 text-3xl font-semibold">AI智能顾问</h2>
+          <div className="pill border-white/10 bg-white/10 text-cyan-100">AI健康对话助手</div>
+          <h2 className="mt-4 text-3xl font-semibold">AI聊天助手</h2>
           <p className="mt-3 text-sm leading-7 text-slate-300 md:text-base">
-            这个模块模拟平台内嵌 AI 助手，客户能直接看到 AI管家如何统一回应收益、产品、健康和消费问题。
+            用户可以直接询问血糖、压力、睡眠和疲劳问题。Nova 只提供日常管理建议，不做医疗诊断。
           </p>
 
           <div className="mt-6 rounded-[28px] border border-white/10 bg-white/5 p-5">
@@ -65,21 +57,11 @@ export function AIChatSection() {
 
           <div className="mt-8 space-y-3">
             {quickQuestions.map((question) => (
-              <button
-                key={question}
-                type="button"
-                onClick={() => handleSend(question)}
-                className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-left text-sm transition hover:bg-white/10"
-              >
+              <button key={question} type="button" onClick={() => handleSend(question)} className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-left text-sm transition hover:bg-white/10">
                 <span>{question}</span>
                 <MessageCircle className="h-4 w-4 text-cyan-300" />
               </button>
             ))}
-          </div>
-
-          <div className="mt-8 rounded-[28px] border border-white/10 bg-white/5 p-5 text-sm text-slate-300">
-            <p>当前对话数：{messages.length}</p>
-            <p className="mt-2">支持快捷问题和手动输入未知问题的统一 Demo 回复。</p>
           </div>
         </div>
 
@@ -90,42 +72,28 @@ export function AIChatSection() {
                 <Bot className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-sm text-slate-500">平台内嵌助手</p>
-                <p className="text-lg font-semibold text-slate-950">AI管家 Nova</p>
+                <p className="text-sm text-slate-500">AI健康生活管家</p>
+                <p className="text-lg font-semibold text-slate-950">Nova</p>
               </div>
             </div>
             <span className="rounded-full bg-emerald-50 px-4 py-2 text-xs font-semibold text-emerald-700">
-              Mock 在线
+              健康建议模式
             </span>
           </div>
 
           <div className="flex-1 space-y-4 overflow-y-auto bg-slate-50/80 px-4 py-5 md:px-6">
             {messages.map((message) => {
               const isAssistant = message.role === "assistant";
-
               return (
-                <div
-                  key={message.id}
-                  className={`flex items-start gap-3 ${
-                    isAssistant ? "" : "justify-end"
-                  }`}
-                >
+                <div key={message.id} className={`flex items-start gap-3 ${isAssistant ? "" : "justify-end"}`}>
                   {isAssistant ? (
                     <div className="rounded-2xl bg-slate-950 p-3 text-white">
                       <Bot className="h-4 w-4" />
                     </div>
                   ) : null}
-
-                  <div
-                    className={`max-w-[88%] rounded-[26px] px-5 py-4 text-sm leading-7 shadow-sm ${
-                      isAssistant
-                        ? "bg-white text-slate-700"
-                        : "bg-cyan-600 text-white"
-                    }`}
-                  >
+                  <div className={`max-w-[88%] rounded-[26px] px-5 py-4 text-sm leading-7 shadow-sm ${isAssistant ? "bg-white text-slate-700" : "bg-cyan-600 text-white"}`}>
                     {message.content}
                   </div>
-
                   {!isAssistant ? (
                     <div className="rounded-2xl bg-cyan-100 p-3 text-cyan-700">
                       <UserRound className="h-4 w-4" />
@@ -147,17 +115,17 @@ export function AIChatSection() {
               <input
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
-                placeholder="输入你想问的问题，例如：我的 Token 适合怎么用？"
+                placeholder="输入问题，例如：我最近血糖高怎么办？"
                 className="h-14 flex-1 rounded-full border border-slate-200 bg-slate-50 px-5 text-sm text-slate-700 outline-none transition focus:border-cyan-300 focus:bg-white"
               />
-              <button
-                type="submit"
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-slate-950 px-6 text-sm font-semibold text-white transition hover:bg-cyan-700"
-              >
+              <button type="submit" className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-slate-950 px-6 text-sm font-semibold text-white">
                 发送
                 <SendHorizonal className="h-4 w-4" />
               </button>
             </div>
+            <p className="mt-3 text-xs leading-6 text-slate-400">
+              说明：此对话仅提供日常健康管理建议，不构成医疗诊断。
+            </p>
           </form>
         </div>
       </div>

@@ -1,5 +1,8 @@
 import { AIChatSection } from "@/components/ai-chat-section";
+import { AIHealthRiskSection } from "@/components/ai-health-risk-section";
+import { AIHealthTrendSection } from "@/components/ai-health-trend-section";
 import { AIOsPanel } from "@/components/ai-os-panel";
+import { AIPredictionSection } from "@/components/ai-prediction-section";
 import { AITaskSection } from "@/components/ai-task-section";
 import { ButlerCard } from "@/components/butler-card";
 import { CoreStatement } from "@/components/core-statement";
@@ -8,7 +11,6 @@ import { HealthAdvisorCard } from "@/components/health-advisor-card";
 import { HealthAssessmentSection } from "@/components/health-assessment-section";
 import { HeroSection } from "@/components/hero-section";
 import { ProductRecommendationSection } from "@/components/product-recommendation-section";
-import { SpendingAdviceCard } from "@/components/spending-advice-card";
 
 export default function HomePage() {
   return (
@@ -18,8 +20,10 @@ export default function HomePage() {
         <AIOsPanel />
         <CoreStatement />
         <ButlerCard />
+        <AIPredictionSection />
+        <AIHealthRiskSection />
+        <AIHealthTrendSection />
         <HealthAdvisorCard />
-        <SpendingAdviceCard />
         <ProductRecommendationSection />
         <AITaskSection />
         <AIChatSection />
