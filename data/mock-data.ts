@@ -147,6 +147,22 @@ export const assetRecommendations = [
 export const assetRecommendationSummary =
   "以下收益率与产品均为演示数据。Nova 会根据会员的矿机收益节奏、Token 累积速度与使用偏好，推荐更适合的资产配置方案。";
 
+export const featuredLaunch = {
+  badge: "新品上线",
+  title: "新一代矿机方案开放体验",
+  subtitle: "预估演示收益率可达 12%",
+  description:
+    "适合希望提升长期 Token 产出能力的会员。Nova 建议把它作为当前阶段的优先关注项。",
+};
+
+export const featuredWealthProduct = {
+  badge: "稳健理财",
+  title: "Token 增益理财方案",
+  subtitle: "预估演示收益率 8.5%",
+  description:
+    "更适合偏稳健的会员，用来平衡矿机产出与长期 Token 累积节奏。",
+};
+
 export const spendingFlow = [
   {
     id: "health",

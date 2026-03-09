@@ -49,7 +49,7 @@ export function HeroSection() {
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#health-products"
+              href="#asset-plan"
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-teal-300 hover:text-teal-700"
             >
               查看资产建议
@@ -84,7 +84,7 @@ export function HeroSection() {
               {dashboardMetrics.map((metric) => (
                 <div
                   key={metric.label}
-                className="rounded-3xl border border-white/10 bg-white/5 p-4"
+                  className="rounded-3xl border border-white/10 bg-white/5 p-4"
                 >
                   <p className="text-sm text-slate-300">{metric.label}</p>
                   <p className={`mt-2 text-xl font-semibold ${metric.tone}`}>{metric.value}</p>
