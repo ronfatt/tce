@@ -16,7 +16,7 @@ export function ButlerCard() {
         <div className="pill">AI 每日概览</div>
         <h2 className="section-title mt-4">AI今日总结</h2>
         <p className="section-copy">
-          Nova 会把收益、健康状态与今日重点动作整理成一个清晰摘要，让用户感到 AI 是在为自己服务。
+          Nova 会把收益、资产配置方向与后续健康消费建议整理成一个清晰摘要，让会员知道 Token 该怎么来、怎么用。
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {stats.map((item) => {
@@ -46,8 +46,8 @@ export function ButlerCard() {
           </div>
           <p className="mt-5 text-lg leading-8 text-slate-100 md:text-xl">“{butlerReminder.quote}”</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#health-products" className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950">
-              查看健康方案
+            <a href="#asset-plan" className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950">
+              查看资产建议
             </a>
             <a href="#ai-chat" className="rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white">
               打开健康助手

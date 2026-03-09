@@ -13,9 +13,9 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(34, 211, 238, 0.16), transparent 32%),
-    radial-gradient(circle at top right, rgba(168, 85, 247, 0.14), transparent 28%),
-    linear-gradient(180deg, #f8fcff 0%, #f5f7fb 40%, #f8fafc 100%);
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.1), transparent 32%),
+    radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent 28%),
+    linear-gradient(180deg, #fbfcfd 0%, #f6f8fa 38%, #f8fafc 100%);
   color: #0f172a;
 }
 
@@ -35,23 +35,23 @@ body {
 
 @layer components {
   .panel {
-    @apply rounded-4xl border border-white/70 bg-white/80 shadow-soft backdrop-blur-xl;
+    @apply rounded-4xl border border-slate-200/80 bg-white/90 shadow-soft backdrop-blur-xl;
   }
 
   .panel-dark {
-    @apply rounded-4xl border border-cyan-200/70 bg-slate-950 text-white shadow-glow;
+    @apply rounded-4xl border border-slate-300/20 bg-slate-900 text-white shadow-soft;
   }
 
   .os-shell {
-    @apply rounded-[2.25rem] border border-white/80 bg-white/70 shadow-soft backdrop-blur-2xl;
+    @apply rounded-[2.25rem] border border-slate-200/80 bg-white/90 shadow-soft backdrop-blur-2xl;
   }
 
   .os-card {
-    @apply rounded-[1.75rem] border border-white/80 bg-white/75 shadow-sm backdrop-blur-xl transition hover:-translate-y-1 hover:shadow-soft;
+    @apply rounded-[1.75rem] border border-slate-200/80 bg-white/95 shadow-sm backdrop-blur-xl transition hover:-translate-y-0.5 hover:shadow-soft;
   }
 
   .os-dark-card {
-    @apply rounded-[1.75rem] border border-cyan-200/20 bg-slate-950/90 text-white shadow-glow;
+    @apply rounded-[1.75rem] border border-slate-300/20 bg-slate-900 text-white shadow-soft;
   }
 
   .section-shell {
@@ -67,6 +67,10 @@ body {
   }
 
   .pill {
-    @apply inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-xs font-medium text-cyan-700;
+    @apply inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-2 text-xs font-medium text-teal-700;
+  }
+
+  .trust-note {
+    @apply rounded-[1.5rem] border border-amber-200 bg-amber-50/80 px-4 py-3 text-xs leading-6 text-amber-900;
   }
 }

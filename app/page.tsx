@@ -1,9 +1,11 @@
 import { AIChatSection } from "@/components/ai-chat-section";
+import { AIAssetRecommendationSection } from "@/components/ai-asset-recommendation-section";
 import { AIHealthRiskSection } from "@/components/ai-health-risk-section";
 import { AIHealthTrendSection } from "@/components/ai-health-trend-section";
 import { AIOsPanel } from "@/components/ai-os-panel";
 import { AIPredictionSection } from "@/components/ai-prediction-section";
 import { AITaskSection } from "@/components/ai-task-section";
+import { AISpendingFlowSection } from "@/components/ai-spending-flow-section";
 import { ButlerCard } from "@/components/butler-card";
 import { CoreStatement } from "@/components/core-statement";
 import { FooterNote } from "@/components/footer-note";
@@ -21,6 +23,8 @@ export default function HomePage() {
         <CoreStatement />
         <ButlerCard />
         <AIPredictionSection />
+        <AIAssetRecommendationSection />
+        <AISpendingFlowSection />
         <AIHealthRiskSection />
         <AIHealthTrendSection />
         <HealthAdvisorCard />

@@ -10,28 +10,28 @@ export type Product = {
 };
 
 export const dashboardMetrics = [
+  { label: "Token余额", value: "56 Token", tone: "text-white" },
+  { label: "今日收益", value: "+2.1 Token", tone: "text-cyan-300" },
   { label: "健康指数", value: "72 / 100", tone: "text-emerald-300" },
-  { label: "睡眠状态", value: "70", tone: "text-cyan-300" },
-  { label: "压力指数", value: "72", tone: "text-fuchsia-300" },
-  { label: "今日提醒", value: "补水优先", tone: "text-white" },
+  { label: "今日提醒", value: "先资产，后消费", tone: "text-fuchsia-300" },
 ];
 
 export const novaGreeting = {
   title: "你好，我是 Nova",
-  description: "你的 AI健康生活管家。",
-  status: "Nova 已为你准备好今日健康建议",
+  description: "你的 AI资产与健康生活管家。",
+  status: "Nova 已为你准备好今日资产与生活建议",
 };
 
 export const heroHighlights = [
-  "围绕健康、提醒、预防与生活管理构建 AI 管家体验",
-  "适合 40+ 会员型平台、健康产品平台与高信任场景演示",
-  "全部使用本地 mock 数据，无需真实登录、支付或医疗系统",
+  "会员先通过矿机与理财积累 Token，再进入健康、服务与娱乐消费场景",
+  "AI管家同时管理资产配置、收益节奏与生活提醒，形成完整体验闭环",
+  "全部使用本地 mock 数据，无需真实登录、支付、钱包或医疗系统",
 ];
 
 export const heroSuggestions = [
-  "优先补足今日饮水",
-  "晚餐减少高糖饮品",
-  "安排 20 分钟轻度散步",
+  "优先关注新矿机与稳健理财方案",
+  "保留健康管理预算，再做后续消费安排",
+  "今天建议完成轻量健康恢复",
 ];
 
 export const lifeIndex = [
@@ -85,18 +85,18 @@ export const osModules = [
 ];
 
 export const coreStatement =
-  "我们不是做一个 AI聊天机器人，而是打造一个 AI生活管家，帮助用户管理收益、健康与生活习惯。";
+  "我们不是做一个 AI聊天机器人，而是打造一个 AI管家系统，帮助会员先做好资产配置，再基于 Token 收益管理健康、服务与生活习惯。";
 
 export const upgradedStatement =
-  "AI管家不仅解读数据，还会主动提醒、观察风险、生成健康任务，并为用户提供更稳妥的生活管理建议。";
+  "AI管家不仅解读数据，还会主动推荐矿机与理财方案、预测收益节奏，并进一步引导健康、服务与娱乐消费。";
 
 export const butlerReminder = {
   tokenGain: "+2.1 Token",
   balance: "56 Token",
   healthScore: "72",
-  action: "当前更适合优先做健康恢复，而不是额外消耗精力",
+  action: "当前更适合优先扩大稳定产出能力，再安排健康与服务消费",
   quote:
-    "根据你最近的睡眠、补水与压力状态，今天更适合做恢复型安排，先把健康状态稳住，再考虑其他消费动作。",
+    "根据你当前的收益节奏，Nova 建议优先扩大稳定产出能力，再将部分 Token 用于健康、服务与娱乐体验，以提高整体平台参与度。",
 };
 
 export const predictiveInsights = [
@@ -119,6 +119,60 @@ export const predictiveInsights = [
     description: "收益持续累积后的预计节点",
   },
 ];
+
+export const assetRecommendations = [
+  {
+    id: "miner",
+    title: "新矿机推荐",
+    rate: "预估演示收益率 12%",
+    note: "适合希望提高长期产出的会员",
+    strategy: "建议优先关注新推出矿机，提高稳定产币能力",
+  },
+  {
+    id: "wealth",
+    title: "稳健理财产品",
+    rate: "预估演示收益率 8.5%",
+    note: "适合优先保守配置、稳定累积 Token 的会员",
+    strategy: "可作为矿机之外的辅助理财方案，降低波动感",
+  },
+  {
+    id: "allocation",
+    title: "当前最优策略",
+    rate: "70% 资产累积 / 20% 健康服务 / 10% 娱乐体验",
+    note: "先保证产出，再保留体验型消费预算",
+    strategy: "这会让平台体验更完整，也更容易解释 Token 去向",
+  },
+];
+
+export const assetRecommendationSummary =
+  "以下收益率与产品均为演示数据。Nova 会根据会员的矿机收益节奏、Token 累积速度与使用偏好，推荐更适合的资产配置方案。";
+
+export const spendingFlow = [
+  {
+    id: "health",
+    title: "健康方案兑换",
+    allocation: "建议分配：20%",
+    description: "用于睡眠修护、血糖管理、日常保养等健康方案。",
+    note: "适合提升长期价值感和用户信任度",
+  },
+  {
+    id: "service",
+    title: "服务体验兑换",
+    allocation: "建议分配：10%",
+    description: "用于会员服务、生活服务或顾问型服务兑换。",
+    note: "适合增强平台服务感和复购逻辑",
+  },
+  {
+    id: "game",
+    title: "轻量娱乐体验",
+    allocation: "建议分配：10%",
+    description: "用于游戏、抽奖或互动体验，控制在小额范围内。",
+    note: "适合作为活跃补充，不建议占用主要预算",
+  },
+];
+
+export const spendingFlowSummary =
+  "Nova 建议会员先保证资产累积，再把部分 Token 分配到健康方案、服务体验和轻量娱乐。这样既能维持长期产出，也能让平台的消费闭环更完整。";
 
 export const healthRiskItems = [
   { label: "血糖风险", value: "中等", tone: "text-amber-600" },
@@ -245,4 +299,4 @@ export const businessValues = [
 ];
 
 export const demoFooterCopy =
-  "本系统为第三方 AI健康生活管家演示层，适用于会员平台、健康产品平台与高信任服务场景。通过 Nova，平台可为用户提供收益说明、健康提醒、生活建议、健康方案推荐与持续陪伴。";
+  "本系统为第三方 AI体验层演示方案，适用于具备矿机、Token、商城、服务或娱乐模块的会员平台。通过 Nova，平台可先引导资产配置与收益理解，再延伸到健康提醒、生活建议、方案推荐与持续陪伴。";

@@ -11,13 +11,13 @@ const icons = {
 
 export function AIOsPanel() {
   return (
-    <SectionShell className="relative overflow-hidden border-slate-200/80 bg-gradient-to-br from-white via-cyan-50/40 to-emerald-50/50 p-0">
+    <SectionShell className="relative overflow-hidden border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-emerald-50/50 p-0">
       <div className="relative p-6 md:p-8">
         <div className="os-shell overflow-hidden border-slate-200/80">
           <div className="border-b border-slate-100 bg-white/80 px-5 py-4">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <p className="text-xs uppercase tracking-[0.24em] text-cyan-700">
+                <p className="text-xs uppercase tracking-[0.24em] text-teal-700">
                   AI Life Dashboard
                 </p>
                 <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950 md:text-3xl">
