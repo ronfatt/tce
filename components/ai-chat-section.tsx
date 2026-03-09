@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Bot, MessageCircle, SendHorizonal, UserRound } from "lucide-react";
-import { quickQuestions } from "@/data/mock-data";
+import { aiMemoryNotes, quickQuestions } from "@/data/mock-data";
 import { getMockAIReply } from "@/utils/chat";
 import { SectionShell } from "@/components/section-shell";
 
@@ -15,7 +15,7 @@ type Message = {
 const welcomeMessage: Message = {
   id: "welcome",
   role: "assistant",
-  content: "你好，我是你的 AI管家。我可以帮你管理收益、健康与消费。",
+  content: "你好，我是你的 AI管家 Nova。我可以帮你管理收益、健康与消费。",
 };
 
 export function AIChatSection() {
@@ -52,6 +52,17 @@ export function AIChatSection() {
             这个模块模拟平台内嵌 AI 助手，客户能直接看到 AI管家如何统一回应收益、产品、健康和消费问题。
           </p>
 
+          <div className="mt-6 rounded-[28px] border border-white/10 bg-white/5 p-5">
+            <p className="text-xs uppercase tracking-[0.2em] text-cyan-200">AI记忆</p>
+            <div className="mt-4 space-y-3">
+              {aiMemoryNotes.map((note) => (
+                <div key={note} className="rounded-2xl bg-white/5 p-4 text-sm text-slate-200">
+                  {note}
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="mt-8 space-y-3">
             {quickQuestions.map((question) => (
               <button
@@ -80,7 +91,7 @@ export function AIChatSection() {
               </div>
               <div>
                 <p className="text-sm text-slate-500">平台内嵌助手</p>
-                <p className="text-lg font-semibold text-slate-950">AI 管家与健康顾问</p>
+                <p className="text-lg font-semibold text-slate-950">AI管家 Nova</p>
               </div>
             </div>
             <span className="rounded-full bg-emerald-50 px-4 py-2 text-xs font-semibold text-emerald-700">

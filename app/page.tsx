@@ -1,4 +1,5 @@
 import { AIChatSection } from "@/components/ai-chat-section";
+import { AIOsPanel } from "@/components/ai-os-panel";
 import { AITaskSection } from "@/components/ai-task-section";
 import { ButlerCard } from "@/components/butler-card";
 import { CoreStatement } from "@/components/core-statement";
@@ -14,6 +15,7 @@ export default function HomePage() {
     <main className="relative overflow-hidden">
       <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-6 px-4 py-4 md:gap-8 md:px-6 md:py-6 xl:px-8">
         <HeroSection />
+        <AIOsPanel />
         <CoreStatement />
         <ButlerCard />
         <HealthAdvisorCard />

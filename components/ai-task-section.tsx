@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
-import { dailyTasks } from "@/data/mock-data";
+import { butlerModeTasks, dailyTasks } from "@/data/mock-data";
 import { SectionShell } from "@/components/section-shell";
 
 export function AITaskSection() {
@@ -12,9 +12,9 @@ export function AITaskSection() {
     <SectionShell id="tasks" className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
       <div>
         <div className="pill">互动感强化</div>
-        <h2 className="section-title mt-4">AI今日任务</h2>
+        <h2 className="section-title mt-4">AI行动计划</h2>
         <p className="section-copy">
-          这个模块会明显提升“被 AI 引导”的体验感。相比普通展示页，它更像一个能驱动用户行动的智能管家中心。
+          这个模块会明显提升“被 AI 引导”的体验感。相比普通展示页，它更像一个会替用户安排今天策略的智能助手。
         </p>
 
         <div className="mt-6 space-y-4">
@@ -28,7 +28,7 @@ export function AITaskSection() {
               </div>
               <div>
                 <p className="text-base font-semibold text-slate-950">{task}</p>
-                <p className="text-sm text-slate-500">由 AI 管家自动生成的今日建议动作</p>
+                <p className="text-sm text-slate-500">由 AI管家 Nova 自动生成的今日行动策略</p>
               </div>
             </div>
           ))}
@@ -64,7 +64,7 @@ export function AITaskSection() {
             <div className="mt-5">
               <p className="text-2xl font-semibold">今天我建议你完成三件事情：</p>
               <div className="mt-6 space-y-4">
-                {dailyTasks.map((task) => (
+                {butlerModeTasks.map((task) => (
                   <div
                     key={task}
                     className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4"

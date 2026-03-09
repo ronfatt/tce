@@ -16,6 +16,12 @@ export const dashboardMetrics = [
   { label: "活跃指数", value: "High", tone: "text-fuchsia-300" },
 ];
 
+export const novaGreeting = {
+  title: "你好，我是 AI管家 Nova",
+  description: "我会帮助你管理收益、健康和消费。",
+  status: "Nova 已为你准备好今日建议",
+};
+
 export const heroHighlights = [
   "AI管家负责资产管理、健康管理、消费策略与平台导航",
   "所有模块由本地 mock 数据驱动，无需真实支付、钱包或登录",
@@ -35,6 +41,28 @@ export const heroSuggestions = [
   "优先兑换健康产品",
   "今日适合小额娱乐游戏",
   "建议增加饮水",
+];
+
+export const predictiveInsights = [
+  {
+    label: "AI Predictive Insight",
+    title: "按照当前收益速度",
+    highlight: "你将在 4 天后",
+    description: "达到 70 Token",
+  },
+  {
+    label: "AI Predictive Insight",
+    title: "你的健康评分",
+    highlight: "预计 7 天可提升至 80",
+    description: "前提是保持饮水和基础运动",
+  },
+];
+
+export const lifeIndex = [
+  { label: "财富指数", value: 65, accent: "from-cyan-400 to-cyan-300" },
+  { label: "健康指数", value: 72, accent: "from-emerald-400 to-emerald-300" },
+  { label: "平台活跃", value: 88, accent: "from-fuchsia-400 to-violet-300" },
+  { label: "消费效率", value: 74, accent: "from-sky-400 to-indigo-300" },
 ];
 
 export const coreStatement =
@@ -122,9 +150,71 @@ export const quickQuestions = [
 
 export const dailyTasks = [
   "领取今日收益",
-  "完成健康打卡",
+  "增加饮水",
   "查看AI推荐产品",
+  "保留10 Token娱乐",
+];
+
+export const butlerModeTasks = [
+  "领取收益",
+  "完成健康打卡",
+  "兑换健康产品",
+];
+
+export const aiMemoryNotes = [
+  "我注意到你最近更常查看健康类建议。",
+  "你上一次更关注能量恢复组合，而不是娱乐消耗。",
+];
+
+export const businessValues = [
+  "提高用户活跃",
+  "提升消费转化",
+  "增强复购率",
+  "拉高平台粘性",
+];
+
+export const osTabs = ["财富", "健康", "娱乐", "消费"];
+
+export const osModules = [
+  {
+    id: "wealth",
+    title: "财富引擎",
+    metric: "65",
+    accent: "bg-cyan-500",
+    summary: "自动追踪收益速度、余额变化与可兑换节点。",
+    action: "4 天后预计达到 70 Token",
+  },
+  {
+    id: "health",
+    title: "健康引擎",
+    metric: "72",
+    accent: "bg-emerald-500",
+    summary: "持续跟踪睡眠、饮水、压力和恢复趋势。",
+    action: "7 天后健康评分预计提升至 80",
+  },
+  {
+    id: "play",
+    title: "娱乐引擎",
+    metric: "High",
+    accent: "bg-fuchsia-500",
+    summary: "根据当前状态建议小额娱乐，控制消耗节奏。",
+    action: "建议保留 10 Token 作为轻量体验预算",
+  },
+  {
+    id: "spend",
+    title: "消费引擎",
+    metric: "74",
+    accent: "bg-indigo-500",
+    summary: "优先推动高价值产品兑换，提升真实感知价值。",
+    action: "能量恢复组合是当前最优先方案",
+  },
+];
+
+export const osStatus = [
+  { label: "系统角色", value: "AI管家 Nova" },
+  { label: "模式", value: "AI Companion OS" },
+  { label: "同步状态", value: "Mock 实时同步" },
 ];
 
 export const demoFooterCopy =
-  "本系统为第三方 AI 用户体验层，适用于已具备 Token、矿机、商城或游戏模块的平台。通过 AI 管家与 AI 健康顾问，平台可为用户提供更智能的收益解读、健康互动、产品推荐与消费引导。";
+  "本系统为第三方 AI Companion OS 演示层，适用于已具备 Token、矿机、商城或游戏模块的平台。通过 AI管家 Nova，平台可为用户提供更智能的收益解读、健康互动、产品推荐与消费引导。";

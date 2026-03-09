@@ -15,6 +15,10 @@ export function CoreStatement() {
             <p className="mt-4 max-w-4xl text-lg font-semibold leading-8 text-slate-950 md:text-2xl">
               {coreStatement}
             </p>
+            <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
+              这不是单一功能页，而是一个把财富、健康、娱乐与消费整合到同一界面的
+              AI Companion OS。
+            </p>
           </div>
         </div>
       </div>

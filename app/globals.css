@@ -42,6 +42,18 @@ body {
     @apply rounded-4xl border border-cyan-200/70 bg-slate-950 text-white shadow-glow;
   }
 
+  .os-shell {
+    @apply rounded-[2.25rem] border border-white/80 bg-white/70 shadow-soft backdrop-blur-2xl;
+  }
+
+  .os-card {
+    @apply rounded-[1.75rem] border border-white/80 bg-white/75 shadow-sm backdrop-blur-xl transition hover:-translate-y-1 hover:shadow-soft;
+  }
+
+  .os-dark-card {
+    @apply rounded-[1.75rem] border border-cyan-200/20 bg-slate-950/90 text-white shadow-glow;
+  }
+
   .section-shell {
     @apply panel p-6 md:p-8;
   }

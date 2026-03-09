@@ -1,8 +1,18 @@
-import { ArrowRight, Sparkles, TrendingUp, Wallet, HeartPulse } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  TrendingUp,
+  Wallet,
+  HeartPulse,
+  Bot,
+} from "lucide-react";
 import {
   dashboardMetrics,
   heroHighlights,
   heroSuggestions,
+  lifeIndex,
+  novaGreeting,
+  predictiveInsights,
 } from "@/data/mock-data";
 import { SectionShell } from "@/components/section-shell";
 
@@ -17,14 +27,30 @@ export function HeroSection() {
         <div className="space-y-6">
           <div className="pill">
             <Sparkles className="h-4 w-4" />
-            AI管家中心 Demo
+            AI Companion OS Demo
+          </div>
+          <div className="max-w-xl rounded-[28px] border border-cyan-100 bg-white/90 p-5 shadow-soft">
+            <div className="flex items-start gap-4">
+              <div className="rounded-2xl bg-slate-950 p-3 text-white">
+                <Bot className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="text-lg font-semibold text-slate-950">{novaGreeting.title}</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  {novaGreeting.description}
+                </p>
+                <p className="mt-3 text-sm font-medium text-cyan-700">
+                  {novaGreeting.status}
+                </p>
+              </div>
+            </div>
           </div>
           <div className="space-y-4">
             <h1 className="max-w-3xl font-[var(--font-heading)] text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl">
-              AI管家控制中心
+              AI Life OS 控制中心
             </h1>
             <p className="max-w-2xl text-base leading-7 text-slate-600 md:text-lg">
-              AI管家实时分析你的收益、健康状态与消费习惯，为你提供每日最佳策略。
+              AI管家 Nova 实时分析你的收益、健康、娱乐与消费习惯，为你提供每日最佳策略。
             </p>
           </div>
 
@@ -108,6 +134,45 @@ export function HeroSection() {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+
+            <div className="grid gap-4 lg:grid-cols-2">
+              {predictiveInsights.map((insight) => (
+                <div
+                  key={insight.highlight}
+                  className="rounded-[28px] border border-white/10 bg-white/5 p-5"
+                >
+                  <p className="text-xs uppercase tracking-[0.24em] text-cyan-200">
+                    {insight.label}
+                  </p>
+                  <p className="mt-3 text-sm text-slate-300">{insight.title}</p>
+                  <p className="mt-2 text-xl font-semibold text-white">{insight.highlight}</p>
+                  <p className="mt-2 text-sm text-slate-400">{insight.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-[28px] border border-cyan-300/20 bg-white/5 p-5">
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-slate-300">AI Life Index</p>
+                <Sparkles className="h-5 w-5 text-fuchsia-300" />
+              </div>
+              <div className="mt-5 space-y-4">
+                {lifeIndex.map((item) => (
+                  <div key={item.label}>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-300">{item.label}</span>
+                      <span className="font-semibold text-white">{item.value}</span>
+                    </div>
+                    <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/10">
+                      <div
+                        className={`h-full rounded-full bg-gradient-to-r ${item.accent}`}
+                        style={{ width: `${item.value}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
