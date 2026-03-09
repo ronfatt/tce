@@ -1,23 +1,22 @@
-import { ArrowUpRight, BrainCircuit, Flame, WalletCards } from "lucide-react";
+import { ArrowUpRight, BrainCircuit, HeartPulse, WalletCards } from "lucide-react";
 import { butlerReminder } from "@/data/mock-data";
 import { SectionShell } from "@/components/section-shell";
 
 const stats = [
   { label: "今日矿机收益", value: butlerReminder.tokenGain, icon: ArrowUpRight },
   { label: "当前余额", value: butlerReminder.balance, icon: WalletCards },
-  { label: "连续活跃", value: butlerReminder.streak, icon: Flame },
-  { label: "推荐动作", value: butlerReminder.action, icon: BrainCircuit },
+  { label: "健康状态评分", value: butlerReminder.healthScore, icon: HeartPulse },
+  { label: "AI分析", value: butlerReminder.action, icon: BrainCircuit },
 ];
 
 export function ButlerCard() {
   return (
     <SectionShell className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
       <div>
-        <div className="pill">AI 管家核心提醒</div>
-        <h2 className="section-title mt-4">AI管家今日提醒</h2>
+        <div className="pill">AI 每日概览</div>
+        <h2 className="section-title mt-4">AI今日总结</h2>
         <p className="section-copy">
-          把收益、余额、活跃度和下一步动作放在同一张卡里，客户一眼就能理解 AI
-          如何帮助平台做用户引导。
+          AI管家为你整理了今日概览，把资产、健康与消费方向合并成一个更适合演示的智能总结卡。
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {stats.map((item) => {
@@ -50,7 +49,7 @@ export function ButlerCard() {
         <div className="relative">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs text-cyan-100">
             <BrainCircuit className="h-4 w-4" />
-            AI建议
+            AI分析
           </div>
           <p className="mt-5 text-lg leading-8 text-slate-100 md:text-xl">
             “{butlerReminder.quote}”
@@ -60,7 +59,7 @@ export function ButlerCard() {
               href="#products"
               className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5"
             >
-              查看推荐产品
+              查看推荐
             </a>
             <a
               href="#ai-chat"

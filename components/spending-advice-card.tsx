@@ -1,10 +1,11 @@
-import { Gamepad2, ShieldCheck, ShoppingBag } from "lucide-react";
+import { Archive, Gamepad2, ShieldCheck, ShoppingBag } from "lucide-react";
 import { spendingChoices, spendingSummary } from "@/data/mock-data";
 import { SectionShell } from "@/components/section-shell";
 
 const icons = {
   redeem: ShoppingBag,
   game: Gamepad2,
+  reserve: Archive,
 };
 
 export function SpendingAdviceCard() {
@@ -13,14 +14,19 @@ export function SpendingAdviceCard() {
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
           <div className="pill">AI 消费引导</div>
-          <h2 className="section-title mt-4">AI消费建议</h2>
+          <h2 className="section-title mt-4">AI消费策略</h2>
           <p className="section-copy">
-            用一张简单但高完成度的卡片，把兑换产品与参与游戏的取舍逻辑直观展示出来。
+            AI 自动给出 Token 的分配策略，让客户直接看到这个系统不是只会展示数据，而是会做消费引导。
           </p>
         </div>
       </div>
 
-      <div className="mt-8 grid gap-4 lg:grid-cols-2">
+      <div className="mt-5 rounded-[30px] border border-cyan-100 bg-cyan-50/70 p-6">
+        <p className="text-sm text-slate-500">你的当前Token</p>
+        <p className="mt-2 text-3xl font-semibold text-slate-950">56</p>
+      </div>
+
+      <div className="mt-8 grid gap-4 lg:grid-cols-3">
         {spendingChoices.map((choice) => {
           const Icon = icons[choice.id as keyof typeof icons];
           return (

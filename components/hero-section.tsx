@@ -1,5 +1,9 @@
 import { ArrowRight, Sparkles, TrendingUp, Wallet, HeartPulse } from "lucide-react";
-import { dashboardMetrics, heroHighlights } from "@/data/mock-data";
+import {
+  dashboardMetrics,
+  heroHighlights,
+  heroSuggestions,
+} from "@/data/mock-data";
 import { SectionShell } from "@/components/section-shell";
 
 export function HeroSection() {
@@ -13,23 +17,23 @@ export function HeroSection() {
         <div className="space-y-6">
           <div className="pill">
             <Sparkles className="h-4 w-4" />
-            中文 AI 体验层 Demo
+            AI管家中心 Demo
           </div>
           <div className="space-y-4">
             <h1 className="max-w-3xl font-[var(--font-heading)] text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl">
-              AI 智能体验系统 Demo
+              AI管家控制中心
             </h1>
             <p className="max-w-2xl text-base leading-7 text-slate-600 md:text-lg">
-              为 Token 平台增加 AI 管家与 AI 健康顾问，提升用户体验、活跃度与复购率
+              AI管家实时分析你的收益、健康状态与消费习惯，为你提供每日最佳策略。
             </p>
           </div>
 
           <div className="flex flex-wrap gap-3">
             <a
-              href="#ai-chat"
+              href="#tasks"
               className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800"
             >
-              立即体验
+              进入 AI管家模式
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
@@ -58,8 +62,8 @@ export function HeroSection() {
           <div className="relative space-y-5">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-slate-300">智能仪表盘预览</p>
-                <h2 className="mt-1 text-2xl font-semibold">AI 用户价值面板</h2>
+                <p className="text-sm text-slate-300">Life Dashboard</p>
+                <h2 className="mt-1 text-2xl font-semibold">AI管家实时概览</h2>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-cyan-200 animate-glow">
                 实时 Demo
@@ -82,25 +86,28 @@ export function HeroSection() {
 
             <div className="rounded-[28px] border border-cyan-300/20 bg-white/5 p-5">
               <div className="flex items-center justify-between">
-                <p className="text-sm text-slate-300">价值转化趋势</p>
+                <p className="text-sm text-slate-300">AI今日建议</p>
                 <TrendingUp className="h-5 w-5 text-cyan-300" />
               </div>
-              <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl bg-white/5 p-4">
-                  <Wallet className="h-5 w-5 text-cyan-300" />
-                  <p className="mt-3 text-xs text-slate-400">收益理解</p>
-                  <p className="mt-1 text-sm font-medium">让用户看懂 Token 去向</p>
-                </div>
-                <div className="rounded-2xl bg-white/5 p-4">
-                  <HeartPulse className="h-5 w-5 text-emerald-300" />
-                  <p className="mt-3 text-xs text-slate-400">健康互动</p>
-                  <p className="mt-1 text-sm font-medium">把健康建议嵌入日常使用</p>
-                </div>
-                <div className="rounded-2xl bg-white/5 p-4">
-                  <Sparkles className="h-5 w-5 text-fuchsia-300" />
-                  <p className="mt-3 text-xs text-slate-400">AI 导购</p>
-                  <p className="mt-1 text-sm font-medium">提升产品兑换与复购率</p>
-                </div>
+              <div className="mt-5 space-y-3">
+                {heroSuggestions.map((item, index) => {
+                  const icons = [Wallet, HeartPulse, Sparkles];
+                  const Icon = icons[index];
+
+                  return (
+                    <div
+                      key={item}
+                      className="flex items-center gap-3 rounded-2xl bg-white/5 p-4"
+                    >
+                      <div className="rounded-2xl bg-white/10 p-3">
+                        <Icon className="h-5 w-5 text-cyan-300" />
+                      </div>
+                      <p className="text-sm font-medium text-slate-100">
+                        {index + 1} {item}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

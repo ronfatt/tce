@@ -15,8 +15,7 @@ type Message = {
 const welcomeMessage: Message = {
   id: "welcome",
   role: "assistant",
-  content:
-    "你好，我是你的 AI 管家与健康顾问。你可以问我收益、产品、健康状态或消费建议。",
+  content: "你好，我是你的 AI管家。我可以帮你管理收益、健康与消费。",
 };
 
 export function AIChatSection() {
@@ -50,7 +49,7 @@ export function AIChatSection() {
           <div className="pill border-white/10 bg-white/10 text-cyan-100">重点模块</div>
           <h2 className="mt-4 text-3xl font-semibold">AI智能顾问</h2>
           <p className="mt-3 text-sm leading-7 text-slate-300 md:text-base">
-            这个模块模拟平台内嵌 AI 助手，客户能直接看到收益问答、产品推荐、健康顾问和消费建议如何在同一界面完成闭环。
+            这个模块模拟平台内嵌 AI 助手，客户能直接看到 AI管家如何统一回应收益、产品、健康和消费问题。
           </p>
 
           <div className="mt-8 space-y-3">

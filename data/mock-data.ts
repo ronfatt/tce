@@ -10,56 +10,72 @@ export type Product = {
 };
 
 export const dashboardMetrics = [
-  { label: "今日产出", value: "2.1 Token", tone: "text-cyan-300" },
-  { label: "当前余额", value: "56 Token", tone: "text-white" },
-  { label: "健康评分", value: "72", tone: "text-emerald-300" },
-  { label: "推荐产品", value: "能量恢复组合", tone: "text-fuchsia-300" },
+  { label: "资产状态", value: "Token余额：56", tone: "text-white" },
+  { label: "今日收益", value: "+2.1 Token", tone: "text-cyan-300" },
+  { label: "健康评分", value: "72 / 100", tone: "text-emerald-300" },
+  { label: "活跃指数", value: "High", tone: "text-fuchsia-300" },
 ];
 
 export const heroHighlights = [
-  "本地 mock 数据，无需区块链或真实支付即可演示",
-  "AI 管家 + AI 健康顾问双引擎，突出用户价值转化",
-  "适合 Token / 矿机 / 商城 / 游戏平台快速叠加 AI 体验层",
+  "AI管家负责资产管理、健康管理、消费策略与平台导航",
+  "所有模块由本地 mock 数据驱动，无需真实支付、钱包或登录",
+  "适合 Token / 矿机 / 商城 / 游戏平台快速加上 AI 用户体验层",
 ];
 
 export const butlerReminder = {
   tokenGain: "+2.1 Token",
   balance: "56 Token",
-  streak: "7 天",
-  action: "兑换健康组合，比用于游戏更高价值",
+  healthScore: "72",
+  action: "当前更适合兑换健康产品，而不是直接参与游戏",
   quote:
-    "根据你最近 3 天的使用情况，你当前更适合优先兑换健康产品，而不是直接参与游戏。这样可获得更高的实际使用价值。",
+    "根据你近期的消费记录，当前更适合兑换健康产品，而不是直接参与游戏。",
 };
 
+export const heroSuggestions = [
+  "优先兑换健康产品",
+  "今日适合小额娱乐游戏",
+  "建议增加饮水",
+];
+
+export const coreStatement =
+  "AI管家是平台的核心智能系统，通过数据分析与个性化建议，帮助用户管理收益、健康与消费。";
+
 export const healthSnapshot = [
-  { label: "睡眠评分", value: "72 / 100" },
+  { label: "睡眠评分", value: "70" },
   { label: "饮水完成度", value: "60%" },
-  { label: "压力状态", value: "中等" },
-  { label: "本周运动", value: "2 次" },
+  { label: "压力指数", value: "中等" },
+  { label: "运动次数", value: "2" },
 ];
 
 export const healthAdvice =
-  "你最近 7 天睡眠波动较明显，建议减少晚间高糖饮品摄取，并增加白天饮水量。若近期容易疲劳，可优先考虑能量恢复类产品。";
+  "你最近7天睡眠波动较大，建议减少晚间咖啡摄入，并增加白天饮水量。";
 
 export const spendingChoices = [
   {
     id: "redeem",
-    title: "兑换产品",
-    suggestion: "建议消耗：30 Token",
-    meta: "推荐：能量恢复组合",
-    badge: "价值评级：高",
+    title: "30 Token",
+    suggestion: "兑换健康组合",
+    meta: "优先完成高价值产品兑换",
+    badge: "最佳策略",
   },
   {
     id: "game",
-    title: "参与游戏",
-    suggestion: "建议预算：10 Token",
-    meta: "风险等级：中",
-    badge: "建议：小额体验",
+    title: "10 Token",
+    suggestion: "娱乐体验",
+    meta: "适合小额试玩，避免过度消耗",
+    badge: "策略分配",
+  },
+  {
+    id: "reserve",
+    title: "剩余 Token",
+    suggestion: "持续累积",
+    meta: "保留灵活额度，为下一次兑换做准备",
+    badge: "长期视角",
   },
 ];
 
 export const spendingSummary =
-  "根据当前平台模拟数据，兑换健康产品的平均使用价值高于短期游戏消耗，更适合当前阶段的你。";
+  "根据平台模拟数据，兑换健康产品的实际价值更高。";
 
 export const productList: Product[] = [
   {
@@ -98,10 +114,16 @@ export const productList: Product[] = [
 ];
 
 export const quickQuestions = [
-  "我今天赚了多少 Token？",
-  "有什么产品适合我？",
+  "我今天赚多少 Token",
+  "有什么产品适合我",
   "我最近有点疲劳",
-  "今天适合参与游戏吗？",
+  "今天适合玩游戏吗",
+];
+
+export const dailyTasks = [
+  "领取今日收益",
+  "完成健康打卡",
+  "查看AI推荐产品",
 ];
 
 export const demoFooterCopy =

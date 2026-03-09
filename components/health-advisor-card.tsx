@@ -11,8 +11,7 @@ export function HealthAdvisorCard() {
         <div className="pill">健康互动层</div>
         <h2 className="section-title mt-4">AI健康顾问</h2>
         <p className="section-copy">
-          通过轻量健康数据和可解释建议，让平台从单一收益展示升级为更有陪伴感的 AI
-          产品体验。
+          AI管家会持续观察用户近期的生活状态，并给出简洁、可解释、可转化为产品建议的健康提醒。
         </p>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -46,6 +45,10 @@ export function HealthAdvisorCard() {
         <p className="mt-6 rounded-[28px] border border-fuchsia-100 bg-fuchsia-50/70 p-6 text-base leading-8 text-slate-700">
           “{healthAdvice}”
         </p>
+        <div className="mt-5 rounded-[28px] border border-cyan-100 bg-cyan-50/70 p-5">
+          <p className="text-sm text-slate-500">推荐产品</p>
+          <p className="mt-2 text-lg font-semibold text-slate-950">能量恢复组合</p>
+        </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
           <a
@@ -58,7 +61,7 @@ export function HealthAdvisorCard() {
             href="#products"
             className="rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-cyan-300 hover:text-cyan-700"
           >
-            查看产品搭配
+            查看组合
           </a>
         </div>
       </div>

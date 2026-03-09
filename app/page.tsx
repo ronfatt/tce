@@ -1,5 +1,7 @@
 import { AIChatSection } from "@/components/ai-chat-section";
+import { AITaskSection } from "@/components/ai-task-section";
 import { ButlerCard } from "@/components/butler-card";
+import { CoreStatement } from "@/components/core-statement";
 import { FooterNote } from "@/components/footer-note";
 import { HealthAdvisorCard } from "@/components/health-advisor-card";
 import { HealthAssessmentSection } from "@/components/health-assessment-section";
@@ -12,10 +14,12 @@ export default function HomePage() {
     <main className="relative overflow-hidden">
       <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-6 px-4 py-4 md:gap-8 md:px-6 md:py-6 xl:px-8">
         <HeroSection />
+        <CoreStatement />
         <ButlerCard />
         <HealthAdvisorCard />
         <SpendingAdviceCard />
         <ProductRecommendationSection />
+        <AITaskSection />
         <AIChatSection />
         <HealthAssessmentSection />
         <FooterNote />
