@@ -11,18 +11,26 @@ import { AISpendingFlowSection } from "@/components/ai-spending-flow-section";
 import { ButlerCard } from "@/components/butler-card";
 import { CoreStatement } from "@/components/core-statement";
 import { FooterNote } from "@/components/footer-note";
+import { FloatingNovaEntry } from "@/components/floating-nova-entry";
 import { HealthAdvisorCard } from "@/components/health-advisor-card";
 import { HealthAssessmentSection } from "@/components/health-assessment-section";
 import { HeroSection } from "@/components/hero-section";
 import { JourneyStrip } from "@/components/journey-strip";
+import { MobileAppHeader } from "@/components/mobile-app-header";
+import { MobileBottomNav } from "@/components/mobile-bottom-nav";
+import { MobileQuickActions } from "@/components/mobile-quick-actions";
 import { ProductRecommendationSection } from "@/components/product-recommendation-section";
 import { StageIntro } from "@/components/stage-intro";
 
 export default function HomePage() {
   return (
-    <main className="relative overflow-hidden">
-      <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-5 px-4 py-4 md:gap-7 md:px-6 md:py-6 xl:px-8">
+    <main id="top" className="relative overflow-hidden">
+      <MobileAppHeader />
+      <FloatingNovaEntry />
+      <MobileBottomNav />
+      <div className="mx-auto flex min-h-screen w-full max-w-[430px] flex-col gap-5 px-4 pb-32 pt-4 md:max-w-[430px] md:gap-7 md:px-6 xl:max-w-[430px] xl:px-6">
         <HeroSection />
+        <MobileQuickActions />
         <JourneyStrip />
         <CoreStatement />
         <StageIntro
