@@ -1,5 +1,6 @@
 import { AIChatSection } from "@/components/ai-chat-section";
 import { AIAssetRecommendationSection } from "@/components/ai-asset-recommendation-section";
+import { AIShareCenterSection } from "@/components/ai-share-center-section";
 import { AIGrowthSection } from "@/components/ai-growth-section";
 import { AIHealthRiskSection } from "@/components/ai-health-risk-section";
 import { AIHealthTrendSection } from "@/components/ai-health-trend-section";
@@ -33,6 +34,7 @@ export default function HomePage() {
         <AIPredictionSection />
         <AIAssetRecommendationSection />
         <AISpendingFlowSection />
+        <AIShareCenterSection />
         <StageIntro
           eyebrow="Stage 02"
           title="把 Token 使用自然延伸到健康、服务与高信任场景"

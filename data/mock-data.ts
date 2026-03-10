@@ -190,6 +190,33 @@ export const spendingFlow = [
 export const spendingFlowSummary =
   "Nova 建议会员先保证资产累积，再把部分 Token 分配到健康方案、服务体验和轻量娱乐。这样既能维持长期产出，也能让平台的消费闭环更完整。";
 
+export const shareCards = [
+  {
+    id: "earnings",
+    badge: "收益见证",
+    title: "我的本周收益进展",
+    headline: "预计 7 天后达到 70 Token",
+    description: "适合分享给朋友或社群，展示矿机收益与 AI 预测带来的长期期待。",
+    footer: "Nova 已生成你的收益进展卡",
+  },
+  {
+    id: "health",
+    badge: "健康见证",
+    title: "我的健康成长趋势",
+    headline: "过去 7 天睡眠改善明显",
+    description: "适合做健康打卡或成长见证，让用户觉得平台不只是消费，而是在陪伴。",
+    footer: "Nova 已生成你的健康趋势卡",
+  },
+  {
+    id: "recommendation",
+    badge: "好康推荐",
+    title: "Nova 推荐给我的方案",
+    headline: "当前最适合：睡眠修护方案",
+    description: "适合分享推荐逻辑和产品好康，帮助形成种草与见证传播。",
+    footer: "Nova 已生成你的推荐分享卡",
+  },
+];
+
 export const healthRiskItems = [
   { label: "血糖风险", value: "中等", tone: "text-amber-600" },
   { label: "胆固醇风险", value: "轻度偏高", tone: "text-orange-600" },
