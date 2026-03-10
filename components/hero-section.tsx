@@ -14,7 +14,7 @@ export function HeroSection() {
         <div className="space-y-6">
           <div className="pill">
             <Sparkles className="h-4 w-4" />
-            AI Companion Layer
+            Nova AI Life OS
           </div>
           <div className="max-w-xl rounded-[28px] border border-cyan-100 bg-white/90 p-5 shadow-soft">
             <div className="flex items-start gap-4">
@@ -22,7 +22,7 @@ export function HeroSection() {
                 <Bot className="h-5 w-5" />
               </div>
               <div>
-              <p className="text-lg font-semibold text-slate-950">{novaGreeting.title}</p>
+                <p className="text-lg font-semibold text-slate-950">{novaGreeting.title}</p>
                 <p className="mt-1 text-sm leading-6 text-slate-600">{novaGreeting.description}</p>
                 <p className="mt-3 text-sm font-medium text-cyan-700">{novaGreeting.status}</p>
               </div>
@@ -33,10 +33,10 @@ export function HeroSection() {
           </div>
           <div className="space-y-4">
             <h1 className="max-w-3xl font-[var(--font-heading)] text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl">
-              AI资产与生活管家
+              Nova AI Life OS
             </h1>
             <p className="max-w-2xl text-base leading-7 text-slate-600 md:text-lg">
-              会员先通过矿机与理财积累 Token，再用 Token 兑换健康方案、服务与娱乐体验。Nova 负责把这条路径解释清楚，并给出更适合的建议。
+              一个帮助会员管理资产、健康与生活的 AI管家系统。
             </p>
           </div>
 

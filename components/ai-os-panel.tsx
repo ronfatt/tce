@@ -10,6 +10,16 @@ const icons = {
 };
 
 export function AIOsPanel() {
+  const radarPoints = lifeIndex
+    .map((item, index) => {
+      const angle = (-90 + index * 90) * (Math.PI / 180);
+      const radius = (item.value / 100) * 74;
+      const x = 90 + Math.cos(angle) * radius;
+      const y = 90 + Math.sin(angle) * radius;
+      return `${x},${y}`;
+    })
+    .join(" ");
+
   return (
     <SectionShell className="relative overflow-hidden border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-emerald-50/50 p-0">
       <div className="relative p-6 md:p-8">
@@ -21,10 +31,10 @@ export function AIOsPanel() {
                   AI Life Dashboard
                 </p>
                 <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950 md:text-3xl">
-                  AI健康生活仪表盘
+                  AI Life Radar
                 </h2>
                 <p className="mt-2 text-sm leading-7 text-slate-600">
-                  AI管家综合你的收益、生活习惯与健康状态，为你生成今日生活指数。
+                  Nova 会把财富、健康、生活与活跃度整合成一张 AI Life Radar，让用户感受到这不只是数据，而是一个人生系统视图。
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -57,22 +67,32 @@ export function AIOsPanel() {
 
           <div className="grid gap-5 p-5 xl:grid-cols-[0.9fr_1.1fr]">
             <div className="os-dark-card p-5">
-              <p className="text-sm text-slate-300">AI健康指数</p>
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                {lifeIndex.map((item) => (
-                  <div key={item.label}>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">{item.label}</span>
-                      <span className="font-semibold text-white">{item.value}</span>
+              <p className="text-sm text-slate-300">AI Life Radar</p>
+              <div className="mt-5 flex flex-col items-center gap-6 lg:flex-row lg:items-start">
+                <svg viewBox="0 0 180 180" className="h-52 w-52">
+                  <circle cx="90" cy="90" r="74" fill="none" stroke="rgba(255,255,255,0.12)" />
+                  <circle cx="90" cy="90" r="54" fill="none" stroke="rgba(255,255,255,0.10)" />
+                  <circle cx="90" cy="90" r="34" fill="none" stroke="rgba(255,255,255,0.08)" />
+                  <line x1="90" y1="16" x2="90" y2="164" stroke="rgba(255,255,255,0.12)" />
+                  <line x1="16" y1="90" x2="164" y2="90" stroke="rgba(255,255,255,0.12)" />
+                  <polygon points={radarPoints} fill="rgba(45, 212, 191, 0.28)" stroke="#5eead4" strokeWidth="3" />
+                </svg>
+                <div className="grid flex-1 gap-4">
+                  {lifeIndex.map((item) => (
+                    <div key={item.label}>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-300">{item.label}</span>
+                        <span className="font-semibold text-white">{item.value}</span>
+                      </div>
+                      <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/10">
+                        <div
+                          className={`h-full rounded-full bg-gradient-to-r ${item.accent}`}
+                          style={{ width: `${item.value}%` }}
+                        />
+                      </div>
                     </div>
-                    <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/10">
-                      <div
-                        className={`h-full rounded-full bg-gradient-to-r ${item.accent}`}
-                        style={{ width: `${item.value}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
 

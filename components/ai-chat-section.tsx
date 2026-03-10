@@ -15,7 +15,7 @@ type Message = {
 const welcomeMessage: Message = {
   id: "welcome",
   role: "assistant",
-  content: "你好，我是 Nova，你的 AI健康生活管家。我可以帮你管理健康提醒、生活习惯和日常保养建议。",
+  content: "你好，我是 Nova，你的 AI生活管家。我注意到你最近更关注睡眠与恢复建议，我可以继续帮你管理收益、健康与生活安排。",
 };
 
 export function AIChatSection() {

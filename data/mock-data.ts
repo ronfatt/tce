@@ -18,8 +18,8 @@ export const dashboardMetrics = [
 
 export const novaGreeting = {
   title: "你好，我是 Nova",
-  description: "你的 AI资产与健康生活管家。",
-  status: "Nova 已为你准备好今日资产与生活建议",
+  description: "你的 AI生活管家",
+  status: "Nova 已为你准备好今日生活建议",
 };
 
 export const heroHighlights = [
@@ -35,19 +35,19 @@ export const heroSuggestions = [
 ];
 
 export const lifeIndex = [
-  { label: "睡眠", value: 70, accent: "from-cyan-400 to-sky-300" },
-  { label: "压力", value: 75, accent: "from-fuchsia-400 to-violet-300" },
-  { label: "血糖风险", value: 65, accent: "from-amber-400 to-orange-300" },
-  { label: "心血管", value: 72, accent: "from-emerald-400 to-green-300" },
+  { label: "财富", value: 76, accent: "from-cyan-400 to-sky-300" },
+  { label: "健康", value: 72, accent: "from-emerald-400 to-green-300" },
+  { label: "生活", value: 68, accent: "from-amber-400 to-orange-300" },
+  { label: "活跃", value: 74, accent: "from-fuchsia-400 to-violet-300" },
 ];
 
 export const osStatus = [
-  { label: "系统角色", value: "Nova AI健康管家" },
-  { label: "模式", value: "AI Personal Health Butler" },
-  { label: "同步状态", value: "Mock 健康追踪中" },
+  { label: "系统角色", value: "Nova AI Life OS" },
+  { label: "模式", value: "AI Life Operating System" },
+  { label: "同步状态", value: "Mock 实时追踪中" },
 ];
 
-export const osTabs = ["睡眠", "压力", "血糖", "心血管"];
+export const osTabs = ["财富", "健康", "生活", "活跃"];
 
 export const osModules = [
   {
@@ -199,6 +199,9 @@ export const healthRiskItems = [
 export const healthRiskSummary =
   "根据你的饮食习惯、睡眠状态与健康评分，AI判断你存在轻度压力与血糖波动风险。";
 
+export const riskExplanation =
+  "Nova 通过生活习惯数据与健康评分进行风险提示，该信息仅用于健康管理参考。";
+
 export const emotionInsight = {
   score: 74,
   status: "轻度疲劳",
@@ -294,6 +297,12 @@ export const dailyTasks = [
 ];
 
 export const butlerModeTasks = ["领取收益", "完成健康打卡", "查看健康方案"];
+
+export const growthSystem = {
+  level: "Level 3",
+  requirements: ["完成健康打卡", "保持活跃", "兑换健康方案"],
+  suggestion: "再完成 2 次健康打卡即可升级。",
+};
 
 export const aiMemoryNotes = [
   "我注意到你最近更常查看睡眠与恢复类建议。",

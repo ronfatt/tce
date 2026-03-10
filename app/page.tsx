@@ -1,5 +1,6 @@
 import { AIChatSection } from "@/components/ai-chat-section";
 import { AIAssetRecommendationSection } from "@/components/ai-asset-recommendation-section";
+import { AIGrowthSection } from "@/components/ai-growth-section";
 import { AIHealthRiskSection } from "@/components/ai-health-risk-section";
 import { AIHealthTrendSection } from "@/components/ai-health-trend-section";
 import { AIOsPanel } from "@/components/ai-os-panel";
@@ -42,6 +43,7 @@ export default function HomePage() {
         <AIHealthTrendSection />
         <HealthAdvisorCard />
         <ProductRecommendationSection />
+        <AIGrowthSection />
         <AITaskSection />
         <StageIntro
           eyebrow="Stage 03"

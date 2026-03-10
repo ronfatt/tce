@@ -1,5 +1,10 @@
 import { AlertTriangle, ArrowRight, Brain, Droplets } from "lucide-react";
-import { emotionInsight, healthRiskItems, healthRiskSummary } from "@/data/mock-data";
+import {
+  emotionInsight,
+  healthRiskItems,
+  healthRiskSummary,
+  riskExplanation,
+} from "@/data/mock-data";
 import { SectionShell } from "@/components/section-shell";
 
 export function AIHealthRiskSection() {
@@ -59,6 +64,10 @@ export function AIHealthRiskSection() {
           <p className="mt-3 text-xs leading-6 text-slate-500">
             注意：此为健康提醒，不构成医疗诊断。
           </p>
+        </div>
+        <div className="mt-4 rounded-[28px] border border-slate-200 bg-slate-50 p-5">
+          <p className="text-sm font-semibold text-slate-900">AI风险说明</p>
+          <p className="mt-2 text-sm leading-7 text-slate-600">{riskExplanation}</p>
         </div>
         <a href="#health-products" className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white">
           查看恢复方案
