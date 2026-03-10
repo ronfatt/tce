@@ -9,7 +9,7 @@ export function MobileAppHeader() {
             尊龙汇
           </div>
           <div>
-            <p className="text-sm font-semibold text-slate-950">AI会员中心</p>
+            <p className="text-sm font-semibold text-slate-950">尊龙汇会员中心</p>
             <p className="text-xs text-slate-500">ZLH Nova 在线</p>
           </div>
         </div>

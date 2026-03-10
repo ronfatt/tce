@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Coins, HeartPulse, House, ListTodo, MessageCircleMore } from "lucide-react";
+import { Coins, HeartPulse, House, ListTodo, UserRound } from "lucide-react";
 
 const items = [
   { href: "/", label: "首页", icon: House },
   { href: "/assets", label: "资产", icon: Coins },
   { href: "/health", label: "健康", icon: HeartPulse },
   { href: "/tasks", label: "任务", icon: ListTodo },
-  { href: "/nova", label: "Nova", icon: MessageCircleMore },
+  { href: "/me", label: "我的", icon: UserRound },
 ];
 
 export function MobileBottomNav() {

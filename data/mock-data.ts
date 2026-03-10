@@ -333,6 +333,36 @@ export const growthSystem = {
 
 export const memberTiers = ["Silver", "Gold", "Platinum", "Diamond"];
 
+export const profileSummary = {
+  name: "尊龙汇会员 · 陈先生",
+  memberId: "ZLH-8821",
+  tier: "Gold",
+  level: "Level 3",
+  tokens: "56 Token",
+  streak: "连续活跃 7 天",
+};
+
+export const profileStats = [
+  { label: "累计收益", value: "128 Token" },
+  { label: "已兑换方案", value: "6 次" },
+  { label: "分享记录", value: "12 次" },
+  { label: "健康任务完成", value: "18 次" },
+];
+
+export const recentActivities = [
+  "已查看新一代矿机方案",
+  "已生成本周收益分享卡",
+  "已完成今日健康打卡",
+  "已领取今日矿机收益",
+];
+
+export const profileShortcuts = [
+  "会员等级说明",
+  "分享记录",
+  "兑换记录",
+  "账户设置",
+];
+
 export const aiMemoryNotes = [
   "我注意到你最近更常查看睡眠与恢复类建议。",
   "你上一次更关注日常保养，而不是即时消耗。",
