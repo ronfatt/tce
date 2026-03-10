@@ -1,5 +1,5 @@
 import { ArrowUpCircle, Trophy } from "lucide-react";
-import { growthSystem } from "@/data/mock-data";
+import { growthSystem, memberTiers } from "@/data/mock-data";
 import { SectionShell } from "@/components/section-shell";
 
 export function AIGrowthSection() {
@@ -8,10 +8,20 @@ export function AIGrowthSection() {
       <div className="rounded-[30px] bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 p-6 text-white shadow-soft">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs text-teal-100">
           <Trophy className="h-4 w-4" />
-          AI成长系统
+          尊龙汇会员体系
         </div>
-        <p className="mt-6 text-sm text-slate-300">Nova 会员等级</p>
-        <p className="mt-2 text-5xl font-semibold text-white">{growthSystem.level}</p>
+        <p className="mt-6 text-sm text-slate-300">Nova Member Level</p>
+        <p className="mt-2 text-5xl font-semibold text-[#D4AF37]">{growthSystem.level}</p>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {memberTiers.map((tier) => (
+            <span
+              key={tier}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-200"
+            >
+              {tier}
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="panel border-teal-100 bg-white/90 p-6">

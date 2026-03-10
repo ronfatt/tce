@@ -55,7 +55,7 @@ export function AIHealthRiskSection() {
                 </div>
                 <p className="text-base font-semibold text-slate-900">{item.label}</p>
               </div>
-              <p className={`text-sm font-semibold ${item.tone}`}>{item.value}</p>
+              <p className="text-sm font-semibold text-[#8E6B00]">{item.value}</p>
             </div>
           ))}
         </div>

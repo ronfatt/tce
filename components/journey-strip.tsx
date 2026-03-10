@@ -25,24 +25,34 @@ const steps = [
 
 export function JourneyStrip() {
   return (
-    <section className="grid gap-4 lg:grid-cols-4">
-      {steps.map((step) => {
-        const Icon = step.icon;
-        return (
-          <div
-            key={step.title}
-            className="rounded-[28px] border border-slate-200/80 bg-white/85 px-5 py-5 shadow-sm"
-          >
-            <div className="flex items-center gap-3">
-              <div className="rounded-2xl bg-slate-900 p-3 text-white">
-                <Icon className="h-5 w-5" />
+    <section className="space-y-4">
+      <div className="px-1">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8E6B00]">
+          尊龙汇会员生态
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950 md:text-3xl">
+          资产增值、健康管理、生活服务、娱乐体验
+        </h2>
+      </div>
+      <div className="grid gap-4 lg:grid-cols-4">
+        {steps.map((step) => {
+          const Icon = step.icon;
+          return (
+            <div
+              key={step.title}
+              className="rounded-[28px] border border-slate-200/80 bg-white/85 px-5 py-5 shadow-sm"
+            >
+              <div className="flex items-center gap-3">
+                <div className="rounded-2xl bg-slate-900 p-3 text-white">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <p className="text-base font-semibold text-slate-950">{step.title}</p>
               </div>
-              <p className="text-base font-semibold text-slate-950">{step.title}</p>
+              <p className="mt-4 text-sm leading-6 text-slate-600">{step.copy}</p>
             </div>
-            <p className="mt-4 text-sm leading-6 text-slate-600">{step.copy}</p>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </section>
   );
 }

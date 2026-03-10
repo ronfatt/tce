@@ -28,7 +28,7 @@ export function AIOsPanel() {
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.24em] text-teal-700">
-                  AI Life Dashboard
+                  尊龙汇 AI Life OS
                 </p>
                 <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950 md:text-3xl">
                   AI Life Radar
@@ -75,7 +75,8 @@ export function AIOsPanel() {
                   <circle cx="90" cy="90" r="34" fill="none" stroke="rgba(255,255,255,0.08)" />
                   <line x1="90" y1="16" x2="90" y2="164" stroke="rgba(255,255,255,0.12)" />
                   <line x1="16" y1="90" x2="164" y2="90" stroke="rgba(255,255,255,0.12)" />
-                  <polygon points={radarPoints} fill="rgba(45, 212, 191, 0.28)" stroke="#5eead4" strokeWidth="3" />
+                  <polygon points={radarPoints} fill="rgba(212, 175, 55, 0.18)" stroke="#D4AF37" strokeWidth="3" />
+                  <circle cx="90" cy="90" r="6" fill="#D4AF37" />
                 </svg>
                 <div className="grid flex-1 gap-4">
                   {lifeIndex.map((item) => (

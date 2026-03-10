@@ -5,10 +5,10 @@ export function FooterNote() {
   return (
     <SectionShell className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white">
       <div className="max-w-4xl">
-        <div className="pill border-white/10 bg-white/10 text-teal-100">Demo 说明</div>
+        <div className="pill border-white/10 bg-white/10 text-[#F6E6A8]">尊龙汇 AI Life OS</div>
         <h2 className="mt-4 text-3xl font-semibold">Demo 说明</h2>
         <p className="mt-5 text-lg font-semibold leading-8 text-white">
-          AI Life OS 是一个智能生活操作系统，通过分析用户的情绪状态、健康变化与消费行为，帮助用户做出更好的生活与消费决策。
+          这是尊龙汇会员系统的 AI升级版本，通过 Nova AI管家帮助会员管理资产、健康生活与消费行为。
         </p>
         <div className="mt-6">
           <p className="text-sm font-semibold text-teal-200">这套系统更适合 40+ 用户，因为它强调健康、稳定与生活管理</p>

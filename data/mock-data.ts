@@ -10,21 +10,21 @@ export type Product = {
 };
 
 export const dashboardMetrics = [
-  { label: "Token余额", value: "56 Token", tone: "text-white" },
-  { label: "今日收益", value: "+2.1 Token", tone: "text-cyan-300" },
-  { label: "健康指数", value: "72 / 100", tone: "text-emerald-300" },
-  { label: "今日提醒", value: "先资产，后消费", tone: "text-fuchsia-300" },
+  { label: "会员资产", value: "56 Token", tone: "text-[#F6E6A8]" },
+  { label: "今日收益", value: "+2.1 Token", tone: "text-[#D4AF37]" },
+  { label: "健康指数", value: "72 / 100", tone: "text-[#F6E6A8]" },
+  { label: "会员等级", value: "Level 3", tone: "text-[#D4AF37]" },
 ];
 
 export const novaGreeting = {
   title: "你好，我是 Nova",
-  description: "你的 AI生活管家",
+  description: "尊龙汇 AI生活管家",
   status: "Nova 已为你准备好今日生活建议",
 };
 
 export const heroHighlights = [
-  "会员先通过矿机与理财积累 Token，再进入健康、服务与娱乐消费场景",
-  "AI管家同时管理资产配置、收益节奏与生活提醒，形成完整体验闭环",
+  "尊龙汇会员先通过矿机与理财积累 Token，再进入健康、服务与娱乐消费场景",
+  "Nova 同时管理资产配置、收益节奏与生活提醒，形成完整体验闭环",
   "全部使用本地 mock 数据，无需真实登录、支付、钱包或医疗系统",
 ];
 
@@ -42,8 +42,8 @@ export const lifeIndex = [
 ];
 
 export const osStatus = [
-  { label: "系统角色", value: "Nova AI Life OS" },
-  { label: "模式", value: "AI Life Operating System" },
+  { label: "系统角色", value: "ZLH Nova" },
+  { label: "模式", value: "尊龙汇 AI Life OS" },
   { label: "同步状态", value: "Mock 实时追踪中" },
 ];
 
@@ -330,6 +330,8 @@ export const growthSystem = {
   requirements: ["完成健康打卡", "保持活跃", "兑换健康方案"],
   suggestion: "再完成 2 次健康打卡即可升级。",
 };
+
+export const memberTiers = ["Silver", "Gold", "Platinum", "Diamond"];
 
 export const aiMemoryNotes = [
   "我注意到你最近更常查看睡眠与恢复类建议。",
