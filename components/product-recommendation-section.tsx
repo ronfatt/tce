@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, Bot, Sparkles } from "lucide-react";
 import { explainableRecommendation, productList, type Product } from "@/data/mock-data";
+import { BottomSheet } from "@/components/bottom-sheet";
 import { SectionShell } from "@/components/section-shell";
 
 export function ProductRecommendationSection() {
@@ -65,27 +66,34 @@ export function ProductRecommendationSection() {
         </div>
       </SectionShell>
 
-      {activeProduct ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/35 p-4 backdrop-blur-sm">
-          <div className="panel w-full max-w-2xl p-6 md:p-8">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <div className="pill">
-                  <Sparkles className="h-4 w-4" />
-                  AI解读
-                </div>
-                <h3 className="mt-4 text-2xl font-semibold text-slate-950">{activeProduct.name}</h3>
-              </div>
-              <button type="button" onClick={() => setActiveProduct(null)} className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-500">
-                关闭
-              </button>
+      <BottomSheet
+        open={Boolean(activeProduct)}
+        onClose={() => setActiveProduct(null)}
+        title={activeProduct?.name}
+        subtitle="Nova AI解读"
+      >
+        {activeProduct ? (
+          <>
+            <div className="pill">
+              <Sparkles className="h-4 w-4" />
+              AI解读
             </div>
-            <p className="mt-6 rounded-[28px] bg-gradient-to-br from-cyan-50 to-emerald-50 p-6 text-base leading-8 text-slate-700">
+            <p className="mt-5 rounded-[28px] bg-gradient-to-br from-cyan-50 to-emerald-50 p-5 text-base leading-8 text-slate-700">
               {activeProduct.aiReason}
             </p>
-          </div>
-        </div>
-      ) : null}
+            <div className="mt-5 grid gap-3">
+              <div className="rounded-[24px] border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+                <span className="font-semibold text-slate-900">适合：</span>
+                {activeProduct.fitFor}
+              </div>
+              <div className="rounded-[24px] border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+                <span className="font-semibold text-slate-900">所需：</span>
+                {activeProduct.tokenCost} Token
+              </div>
+            </div>
+          </>
+        ) : null}
+      </BottomSheet>
     </>
   );
 }

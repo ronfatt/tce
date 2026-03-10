@@ -1,10 +1,10 @@
 import { Activity, Coins, Gift, WalletCards } from "lucide-react";
 
 const actions = [
-  { label: "查看收益", href: "#top", icon: Coins },
-  { label: "新矿机", href: "#asset-plan", icon: WalletCards },
-  { label: "健康方案", href: "#health-products", icon: Activity },
-  { label: "分享见证", href: "#ai-chat", icon: Gift },
+  { label: "查看收益", href: "/assets", icon: Coins },
+  { label: "新矿机", href: "/assets", icon: WalletCards },
+  { label: "健康方案", href: "/health", icon: Activity },
+  { label: "分享见证", href: "/tasks", icon: Gift },
 ];
 
 export function MobileQuickActions() {
